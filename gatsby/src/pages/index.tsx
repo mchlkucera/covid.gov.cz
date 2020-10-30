@@ -1,8 +1,8 @@
 import React from 'react';
+import Box from '@/components/box/box';
 
-import Button from '@/components/button/Button';
 const Home: React.FC = () => {
-  return <Button>Test</Button>;
+  return <Box title='Já jsem title' subText='Já jsem subtext' />;
 };
 
 export default Home;

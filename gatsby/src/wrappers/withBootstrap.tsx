@@ -1,8 +1,8 @@
 import React from 'react';
 import 'assets/bootstrap/bootstrap.scss';
 
-const withBootstrap = (WrappedComponent: any) => {
-  const Wrapper: React.FC = (props: any) => {
+const withBootstrap = <T extends {}>(WrappedComponent: React.FC<T>) => {
+  const Wrapper: React.FC<T> = (props: any) => {
     return <WrappedComponent {...props} />;
   };
 
