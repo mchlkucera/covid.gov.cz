@@ -1,18 +1,8 @@
 import React from 'react';
 
-import BootstrapLayout from '@/layouts/bootstrap-layout';
-export default function Home() {
-  return (
-    <BootstrapLayout>
-      <div className='btn btn-primary'>Bootstrap Layout</div>
-      <BootstrapLayout />
-      <BootstrapLayout />
-      <BootstrapLayout />
-      <BootstrapLayout />
-      <BootstrapLayout />
-      <BootstrapLayout />
-      <BootstrapLayout />
-      <BootstrapLayout />
-    </BootstrapLayout>
-  );
-}
+import Button from '@/components/button/Button';
+const Home: React.FC = () => {
+  return <Button>Test</Button>;
+};
+
+export default Home;
