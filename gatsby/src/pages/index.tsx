@@ -1,6 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-import Hello from '@/components/hello'
+import BootstrapLayout from '@/layouts/bootstrap-layout';
 export default function Home() {
-  return <Hello />
+  return (
+    <BootstrapLayout>
+      <div className='btn btn-primary'>Bootstrap Layout</div>
+      <BootstrapLayout />
+      <BootstrapLayout />
+      <BootstrapLayout />
+      <BootstrapLayout />
+      <BootstrapLayout />
+      <BootstrapLayout />
+      <BootstrapLayout />
+      <BootstrapLayout />
+    </BootstrapLayout>
+  );
 }
