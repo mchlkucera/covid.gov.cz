@@ -16,6 +16,7 @@ import {
   row,
   bodyWrapperIn,
 } from 'assets/_importme.module.scss';
+import clsx from '@/helpers/combine-classes';
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -28,15 +29,13 @@ const Home: React.FC = () => {
 
   return (
     <div className={pvsTheme}>
-      <div className={`${mx3} ${my1}`}>
+      <div className={clsx(mx3, my1)}>
         <div className={`${guide} ${guideHp} ${mt0}`}>
           <div className={row}>
             <div className={`${col12} ${colLg3}`}>
-              <div>
-                <h2 className={guideTitle}>
-                  <strong>Průvodce</strong> životními situacemi
-                </h2>
-              </div>
+              <h2 className={guideTitle}>
+                <strong>Průvodce</strong> životními situacemi
+              </h2>
             </div>
             <div className={`${col12} ${colLg9}`}>
               <div className={`${row} ${boxesLight} ${boxes}`}>
