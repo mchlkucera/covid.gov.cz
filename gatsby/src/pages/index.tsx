@@ -1,8 +1,58 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Box from '@/components/box/box';
+import {
+  boxes,
+  boxesLight,
+  col12,
+  colLg3,
+  colLg9,
+  guide,
+  guideHp,
+  guideTitle,
+  mt0,
+  mx3,
+  my1,
+  pvsTheme,
+  row,
+  bodyWrapperIn,
+} from 'assets/_importme.module.scss';
 
 const Home: React.FC = () => {
-  return <Box title='Já jsem title' subText='Já jsem subtext' />;
+  useEffect(() => {
+    const html = document.getElementsByTagName('html')[0];
+    html.className = `${html.className} ${pvsTheme}`;
+
+    const body = document.getElementsByTagName('body')[0];
+    body.className = `${body.className} ${bodyWrapperIn}`;
+  }, []);
+
+  return (
+    <div className={pvsTheme}>
+      <div className={`${mx3} ${my1}`}>
+        <div className={`${guide} ${guideHp} ${mt0}`}>
+          <div className={row}>
+            <div className={`${col12} ${colLg3}`}>
+              <div>
+                <h2 className={guideTitle}>
+                  <strong>Průvodce</strong> životními situacemi
+                </h2>
+              </div>
+            </div>
+            <div className={`${col12} ${colLg9}`}>
+              <div className={`${row} ${boxesLight} ${boxes}`}>
+                <Box title='Odchod do starobního důchodu' subText='Rodina' />
+                <Box title='Já jsem title' subText='Já jsem subtext' />
+                <Box title='Já jsem title' subText='Já jsem subtext' />
+                <Box title='Já jsem title' subText='Já jsem subtext' />
+                <Box title='Já jsem title' subText='Já jsem subtext' />
+                <Box title='Já jsem title' subText='Já jsem subtext' />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

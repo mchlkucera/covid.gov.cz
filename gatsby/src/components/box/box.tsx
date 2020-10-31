@@ -1,5 +1,18 @@
-import withBootstrap from '@/wrappers/withBootstrap';
 import React from 'react';
+import {
+  boxInner,
+  boxTitle,
+  inverse,
+  btn,
+  btnInverse,
+  btnRaw,
+  btnMore,
+  boxMore,
+  col12,
+  colSm6,
+  colLg4,
+  box,
+} from 'assets/_importme.module.scss';
 
 interface IProps {
   title: string;
@@ -15,16 +28,17 @@ const Box: React.FC<IProps> = ({
   subUrl = '#',
 }) => {
   return (
-    <div className='col-12 col-sm-6 col-lg-4 box'>
-      <div className='box__inner'>
-        <h3 className='box__title' style={{ height: 78 }}>
-          <a href={mainUrl} className='inverse'>
+    <div className={`${col12} ${colSm6} ${colLg4} ${box}`}>
+      <div className={boxInner}>
+        <h3 className={boxTitle} style={{ height: 78 }}>
+          <a href={mainUrl} className={inverse}>
             {title}
           </a>
         </h3>
         <a
           href={subUrl}
-          className='btn btn-inverse btn--raw btn--more box__more'
+          className={` ${btn} ${btnRaw} ${btnMore} ${btnInverse} ${boxMore} `}
+          style={{ fontSize: 14 }}
         >
           {subText}
         </a>
@@ -33,4 +47,4 @@ const Box: React.FC<IProps> = ({
   );
 };
 
-export default withBootstrap<IProps>(Box);
+export default Box;
